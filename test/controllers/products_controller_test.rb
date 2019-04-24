@@ -41,8 +41,15 @@ class ProductsControllerTest < ActionDispatch::IntegrationTest
     assert_response :success
   end
 
+  test "can't delete product in cart" do
+    assert_difference('Product.count', 0) do
+      delete product_url(products(:two))
+    end
+
+    assert_redirected_to products_url
+  end
+
   test "should update product" do
-    skip
     patch product_url(@product_old), params: {
       product: {
         description: @product_old.description,
@@ -51,7 +58,7 @@ class ProductsControllerTest < ActionDispatch::IntegrationTest
         title: 'New Title'
       }
     }
-    assert_redirected_to product_url(@product_old)
+    assert_response :success
   end
 
   test "should destroy product" do
