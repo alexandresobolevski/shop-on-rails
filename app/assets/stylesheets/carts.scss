@@ -4,12 +4,9 @@
 .carts {
   table {
     border-collapse: collapse;
-    margin-bottom: 30px;
   }
   td {
-    padding: 0.5em;
     &.quantity {
-      white-space: nowrap;
       &::after {
         content: " x";
       }
@@ -22,7 +19,6 @@
   tfoot {
     th, td.price {
       font-weight: bold;
-      padding: 10px 0.354em;
     }
     th {
       text-align: right;
@@ -32,12 +28,7 @@
     }
   }
   input[type="submit"] {
-    border-radius: 0.354em;
-    border: solid thin black;
     font-size: 1em;
-    padding: 10px 20px;
-    &:hover {
-      background-color: lightgrey;
-    }
+    cursor: pointer;
   }
 }

@@ -1,0 +1,7 @@
+# Read about fixtures at http://api.rubyonrails.org/classes/ActiveRecord/FixtureSet.html
+
+one:
+  name: Sherlock Holmes
+  address: 221B Baker Street
+  email: sherlock.holmes@gmail.com
+  pay_type: Check

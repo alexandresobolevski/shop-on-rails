@@ -6,12 +6,9 @@
   ul.catalog {
     border-top: solid 0.25em;
     list-style: none;
-    padding: 0;
-    margin: 0;
     li {
-      padding: 1em;
-      margin: 0;
       border-bottom: solid thin #ddd;
+      text-align: left;
       &::after {
         clear: both;
         content: " ";
@@ -26,23 +23,12 @@
         margin-bottom: 1em;
         box-shadow: 0.176em 0.176em 0.354em 0 rgba(0,0,0,0.75)
       }
-      .price {
-        font-size: 1.414em;
-      }
       form, div {
         display: inline;
       }
       input[type='submit'] {
-        background-color: #282;
-        border-radius: 0.354em;
-        border: solid this #141;
-        color: white;
-        font-size: 1em;
-        padding: 0.354em 1em;
+        border: 1px solid black;
         cursor: pointer;
-        &:hover {
-          background-color: #141;
-        }
       }
     }
   }

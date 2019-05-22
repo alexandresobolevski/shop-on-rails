@@ -25,6 +25,11 @@
           <li><a href='/news'>News</a></li>
           <li><a href='/contact'>Contact</a></li>
         </ul>
+        <% if @cart %>
+          <div id='cart' class='carts'>
+            <%= render_if(@cart && @cart.line_items.any?, @cart) %>
+          </div>
+        <% end %>
       </nav>
       <main class='<%= controller.controller_name %>'>
         <%= yield %>
